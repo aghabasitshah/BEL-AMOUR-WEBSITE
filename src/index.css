@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;700;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-cream: #FAF7F0;
+  --color-espresso: #1A1410;
+  --color-gold: #D4AF37;
+  --color-chocolate: #2C2419;
+  --color-taupe: #5C4D3C;
+  --color-highlight: #C9A99A;
+
+  --font-display: "Playfair Display", serif;
+  --font-sans: "Inter", sans-serif;
+}
+
+body {
+  background-color: var(--color-cream);
+  color: var(--color-espresso);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
