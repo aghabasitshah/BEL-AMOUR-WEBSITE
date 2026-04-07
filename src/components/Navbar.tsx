@@ -22,7 +22,7 @@ export function Navbar() {
           <div className="flex-shrink-0">
             <button 
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-              className="px-6 py-3 rounded-full bg-espresso text-cream text-xs font-bold tracking-wider hover:bg-chocolate transition-colors"
+              className="px-4 py-2 md:px-6 md:py-3 rounded-full bg-espresso text-cream text-[10px] md:text-xs font-bold tracking-wider hover:bg-chocolate transition-colors whitespace-nowrap"
             >
               BOOK APPOINTMENT
             </button>

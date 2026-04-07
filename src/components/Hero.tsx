@@ -66,34 +66,34 @@ export function Hero() {
         <motion.div
           animate={{ y: [-15, 15, -15] }}
           transition={{ duration: 6, ease: floatEase, repeat: Infinity }}
-          className="absolute left-[5%] md:left-[15%] top-[40%] md:top-[50%] hidden md:flex flex-col items-center justify-center p-6 rounded-[2rem] bg-espresso border border-gold/20 shadow-2xl -rotate-6 z-30 w-48 h-56"
+          className="absolute left-[-2%] sm:left-[5%] md:left-[15%] top-[60%] sm:top-[50%] md:top-[50%] flex flex-col items-center justify-center p-4 md:p-6 rounded-2xl md:rounded-[2rem] bg-espresso border border-gold/20 shadow-2xl -rotate-6 z-30 w-32 h-40 md:w-48 md:h-56"
         >
-          <div className="w-12 h-12 rounded-full bg-gold/10 flex items-center justify-center mb-4">
-            <svg className="w-6 h-6 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <div className="w-8 h-8 md:w-12 md:h-12 rounded-full bg-gold/10 flex items-center justify-center mb-2 md:mb-4">
+            <svg className="w-4 h-4 md:w-6 md:h-6 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
             </svg>
           </div>
-          <span className="font-display font-bold text-cream text-xl mb-1">MEHNDI</span>
-          <span className="font-sans text-gold text-xs tracking-widest uppercase">Bridal Art</span>
+          <span className="font-display font-bold text-cream text-sm md:text-xl mb-1">MEHNDI</span>
+          <span className="font-sans text-gold text-[8px] md:text-xs tracking-widest uppercase text-center">Bridal Art</span>
         </motion.div>
 
         <motion.div
           animate={{ y: [-20, 20, -20] }}
           transition={{ duration: 7, delay: 1, ease: floatEase, repeat: Infinity }}
-          className="absolute right-[5%] md:right-[15%] top-[30%] md:top-[40%] hidden md:flex flex-col items-center justify-center p-6 rounded-[2rem] bg-white border border-gold/20 shadow-2xl rotate-6 z-30 w-48 h-56"
+          className="absolute right-[-2%] sm:right-[5%] md:right-[15%] top-[20%] sm:top-[30%] md:top-[40%] flex flex-col items-center justify-center p-4 md:p-6 rounded-2xl md:rounded-[2rem] bg-white border border-gold/20 shadow-2xl rotate-6 z-30 w-32 h-40 md:w-48 md:h-56"
         >
-          <div className="w-12 h-12 rounded-full bg-gold/10 flex items-center justify-center mb-4">
-            <svg className="w-6 h-6 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <div className="w-8 h-8 md:w-12 md:h-12 rounded-full bg-gold/10 flex items-center justify-center mb-2 md:mb-4">
+            <svg className="w-4 h-4 md:w-6 md:h-6 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
             </svg>
           </div>
-          <span className="font-display font-bold text-espresso text-xl mb-1">MAKEUP</span>
-          <span className="font-sans text-taupe text-xs tracking-widest uppercase">Bridal & Party</span>
+          <span className="font-display font-bold text-espresso text-sm md:text-xl mb-1">MAKEUP</span>
+          <span className="font-sans text-taupe text-[8px] md:text-xs tracking-widest uppercase text-center">Bridal & Party</span>
         </motion.div>
 
         {/* Rotating Seal */}
         <div 
-          className="absolute right-8 bottom-8 md:right-16 md:bottom-16 w-24 h-24 md:w-32 md:h-32 cursor-pointer group z-30"
+          className="absolute right-4 bottom-24 md:right-16 md:bottom-16 w-20 h-20 md:w-32 md:h-32 cursor-pointer group z-30"
           onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
         >
           <motion.div
@@ -103,15 +103,15 @@ export function Hero() {
           >
             <svg viewBox="0 0 100 100" className="w-full h-full text-espresso overflow-visible">
               <path id="circlePath" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" fill="none" />
-              <text className="text-[11px] font-sans font-bold tracking-[0.2em] uppercase">
+              <text className="text-[9px] md:text-[11px] font-sans font-bold tracking-[0.2em] uppercase">
                 <textPath href="#circlePath" startOffset="0%">
                   BOOK NOW • BOOK NOW • BOOK NOW •
                 </textPath>
               </text>
             </svg>
           </motion.div>
-          <div className="absolute inset-0 m-auto w-12 h-12 md:w-16 md:h-16 bg-gold rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-            <ArrowRight className="w-6 h-6 md:w-8 md:h-8 text-espresso" />
+          <div className="absolute inset-0 m-auto w-10 h-10 md:w-16 md:h-16 bg-gold rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+            <ArrowRight className="w-5 h-5 md:w-8 md:h-8 text-espresso" />
           </div>
         </div>
       </div>

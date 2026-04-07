@@ -28,6 +28,31 @@ const testimonials = [
 export function Testimonials() {
   const [isHovered, setIsHovered] = useState(false);
   const controls = useAnimation();
+  const [radius, setRadius] = useState(400);
+  const [cardWidth, setCardWidth] = useState(360);
+  const [cardHeight, setCardHeight] = useState(400);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 640) {
+        setRadius(160);
+        setCardWidth(260);
+        setCardHeight(320);
+      } else if (window.innerWidth < 1024) {
+        setRadius(250);
+        setCardWidth(300);
+        setCardHeight(360);
+      } else {
+        setRadius(400);
+        setCardWidth(360);
+        setCardHeight(400);
+      }
+    };
+    
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
   
   useEffect(() => {
     if (!isHovered) {
@@ -51,39 +76,42 @@ export function Testimonials() {
         <p className="font-sans text-taupe tracking-[0.2em] uppercase text-sm font-medium">EXPERIENCES OF ELEGANCE</p>
       </div>
 
-      {/* Desktop 3D Carousel */}
-      <div className="hidden md:flex justify-center items-center h-[500px] perspective-[1200px]">
+      {/* 3D Carousel (Responsive) */}
+      <div className="flex justify-center items-center h-[400px] md:h-[500px] perspective-[1000px] md:perspective-[1200px]">
         <motion.div
-          className="relative w-[360px] h-[400px] preserve-3d"
+          className="relative preserve-3d"
+          style={{ width: cardWidth, height: cardHeight }}
           animate={controls}
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
+          onTouchStart={() => setIsHovered(true)}
+          onTouchEnd={() => setIsHovered(false)}
         >
           {testimonials.map((t, i) => {
             const angle = (i / testimonials.length) * 360;
             return (
               <div
                 key={i}
-                className="absolute top-0 left-0 w-full h-full bg-white border border-gold/20 rounded-[2rem] shadow-[0_25px_50px_-12px_rgba(26,20,16,0.15)] p-8 flex flex-col justify-between"
+                className="absolute top-0 left-0 w-full h-full bg-white border border-gold/20 rounded-2xl md:rounded-[2rem] shadow-[0_25px_50px_-12px_rgba(26,20,16,0.15)] p-6 md:p-8 flex flex-col justify-between"
                 style={{
-                  transform: `rotateY(${angle}deg) translateZ(400px)`,
+                  transform: `rotateY(${angle}deg) translateZ(${radius}px)`,
                   backfaceVisibility: "hidden",
                 }}
               >
                 <div>
-                  <Quote className="w-8 h-8 text-gold mb-6" />
-                  <p className="font-sans text-espresso text-lg leading-relaxed relative z-10">
+                  <Quote className="w-6 h-6 md:w-8 h-8 text-gold mb-4 md:mb-6" />
+                  <p className="font-sans text-espresso text-sm md:text-lg leading-relaxed relative z-10">
                     "{t.quote}"
                   </p>
                 </div>
                 <div>
-                  <p className="font-display font-bold text-espresso text-xl mb-1 uppercase tracking-wider text-sm">{t.author}</p>
-                  <span className="inline-block text-taupe text-xs font-medium uppercase tracking-widest mb-4">
+                  <p className="font-display font-bold text-espresso text-lg md:text-xl mb-1 uppercase tracking-wider">{t.author}</p>
+                  <span className="inline-block text-taupe text-[10px] md:text-xs font-medium uppercase tracking-widest mb-3 md:mb-4">
                     {t.service}
                   </span>
                   <div className="flex text-gold">
                     {[...Array(5)].map((_, j) => (
-                      <Star key={j} className="w-4 h-4 fill-current" />
+                      <Star key={j} className="w-3 h-3 md:w-4 md:h-4 fill-current" />
                     ))}
                   </div>
                 </div>
@@ -91,34 +119,6 @@ export function Testimonials() {
             );
           })}
         </motion.div>
-      </div>
-
-      {/* Mobile 2D Slider */}
-      <div className="md:hidden flex overflow-x-auto snap-x snap-mandatory no-scrollbar px-4 pb-12 gap-6">
-        {testimonials.map((t, i) => (
-          <div
-            key={i}
-            className="flex-none w-[85vw] max-w-[360px] snap-center bg-white border border-gold/20 rounded-[2rem] shadow-[0_25px_50px_-12px_rgba(26,20,16,0.15)] p-8 flex flex-col justify-between min-h-[320px]"
-          >
-            <div>
-              <Quote className="w-8 h-8 text-gold mb-6" />
-              <p className="font-sans text-espresso text-lg leading-relaxed">
-                "{t.quote}"
-              </p>
-            </div>
-            <div className="mt-8">
-              <p className="font-display font-bold text-espresso text-xl mb-1 uppercase tracking-wider text-sm">{t.author}</p>
-              <span className="inline-block text-taupe text-xs font-medium uppercase tracking-widest mb-4">
-                {t.service}
-              </span>
-              <div className="flex text-gold">
-                {[...Array(5)].map((_, j) => (
-                  <Star key={j} className="w-4 h-4 fill-current" />
-                ))}
-              </div>
-            </div>
-          </div>
-        ))}
       </div>
     </section>
   );
