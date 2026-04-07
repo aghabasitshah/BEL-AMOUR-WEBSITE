@@ -26,7 +26,7 @@ export function Contact() {
     e.preventDefault();
     setIsSubmitting(true);
     
-    const phoneNumber = "923330717123";
+    const phoneNumber = "923366068128";
     const text = `*New Appointment Request*\n\n*Name:* ${formData.name}\n*WhatsApp:* ${formData.whatsapp}\n*Service:* ${formData.service}\n*Preferred Date:* ${formData.date}\n*Message:* ${formData.message || 'N/A'}`;
     const encodedText = encodeURIComponent(text);
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedText}`;
@@ -70,7 +70,7 @@ export function Contact() {
                 <div>
                   <h4 className="font-sans font-bold text-lg tracking-wider mb-1">WHATSAPP / CALL</h4>
                   <p className="text-cream/70">+92 333 0717123</p>
-                  <p className="text-cream/70">+92 333 6068128</p>
+                  <p className="text-cream/70">+92 336 6068128</p>
                 </div>
               </div>
 

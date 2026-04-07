@@ -53,7 +53,7 @@ export function Footer() {
             <ul className="space-y-3 text-cream/60 text-sm">
               <li>Airport road, Quetta Near TCS Office</li>
               <li>WhatsApp / Call: +92 333 0717123</li>
-              <li>+92 333 6068128</li>
+              <li>+92 336 6068128</li>
               <li>belamourspasaloon@gmail.com</li>
             </ul>
           </div>
