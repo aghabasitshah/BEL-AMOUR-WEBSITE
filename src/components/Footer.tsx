@@ -6,19 +6,21 @@ export function Footer() {
       {/* Map Bar */}
       <div className="w-full border-b border-gold/10 py-6 text-center">
         <p className="font-sans text-sm tracking-[0.2em] text-cream/60 uppercase">
-          GOOGLE MAPS INTEGRATION — AIRPORT ROAD, QUETTA
+          GOOGLE MAPS INTEGRATION — AIRPORT ROAD, QUETTA NEAR TCS OFFICE
         </p>
       </div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
           {/* Logo */}
-          <div>
-            <div className="flex flex-col mb-6">
-              <span className="font-display font-black text-2xl text-cream leading-none">BEL'AMOUR</span>
-              <span className="font-sans text-[10px] text-gold tracking-widest uppercase mt-1">Spa & Salon</span>
+          <div className="lg:col-span-2">
+            <div className="flex items-center mb-6">
+              <div className="relative w-20 h-20 flex items-center justify-center text-cream font-display">
+                <span className="absolute text-[64px] font-normal leading-none" style={{ left: '4px', top: '0px', zIndex: 10 }}>B</span>
+                <span className="absolute text-[64px] font-normal leading-none" style={{ left: '30px', top: '24px', zIndex: 20 }}>A</span>
+              </div>
             </div>
-            <p className="font-sans text-cream/60 text-sm leading-relaxed pr-4">
+            <p className="font-sans text-cream/60 text-sm leading-relaxed pr-4 mt-2">
               Quetta's premier destination for luxury beauty treatments, bridal services, and rejuvenating spa experiences.
             </p>
           </div>
@@ -35,23 +37,24 @@ export function Footer() {
             </ul>
           </div>
 
+          {/* Company */}
+          <div>
+            <h4 className="font-sans font-bold tracking-wider mb-6 text-cream">COMPANY</h4>
+            <ul className="space-y-3 text-cream/60 text-sm">
+              <li><a href="#about" className="hover:text-gold transition-colors">About Us</a></li>
+              <li><a href="#contact" className="hover:text-gold transition-colors">Contact Us</a></li>
+              <li><a href="#privacy" className="hover:text-gold transition-colors">Privacy Policy</a></li>
+            </ul>
+          </div>
+
           {/* Contact */}
           <div>
             <h4 className="font-sans font-bold tracking-wider mb-6 text-cream">CONTACT</h4>
             <ul className="space-y-3 text-cream/60 text-sm">
-              <li>Airport Road, Quetta</li>
-              <li>WhatsApp: 0333 0717123</li>
-              <li>@belamour_salonandspa</li>
-              <li>A Project by RJ Group</li>
-            </ul>
-          </div>
-
-          {/* Hours */}
-          <div>
-            <h4 className="font-sans font-bold tracking-wider mb-6 text-cream">HOURS</h4>
-            <ul className="space-y-3 text-cream/60 text-sm">
-              <li>Mon-Sat: 10AM - 8PM</li>
-              <li>Sunday: By Appointment</li>
+              <li>Airport road, Quetta Near TCS Office</li>
+              <li>WhatsApp / Call: +92 333 0717123</li>
+              <li>+92 333 6068128</li>
+              <li>belamourspasaloon@gmail.com</li>
             </ul>
           </div>
         </div>

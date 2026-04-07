@@ -9,7 +9,8 @@ const services = [
     bg: "bg-white",
     text: "text-espresso",
     iconColor: "text-espresso",
-    descColor: "text-taupe"
+    descColor: "text-taupe",
+    value: "Haircut"
   },
   {
     title: "MEHNDI",
@@ -18,7 +19,8 @@ const services = [
     bg: "bg-espresso",
     text: "text-cream",
     iconColor: "text-gold",
-    descColor: "text-cream/70"
+    descColor: "text-cream/70",
+    value: "Mehndi"
   },
   {
     title: "MAKEUP",
@@ -27,7 +29,8 @@ const services = [
     bg: "bg-white",
     text: "text-espresso",
     iconColor: "text-espresso",
-    descColor: "text-taupe"
+    descColor: "text-taupe",
+    value: "Makeup"
   },
   {
     title: "MICROBLADING",
@@ -36,7 +39,8 @@ const services = [
     bg: "bg-gold",
     text: "text-espresso",
     iconColor: "text-espresso",
-    descColor: "text-espresso/70"
+    descColor: "text-espresso/70",
+    value: "Microblading"
   },
   {
     title: "SPA TREATMENTS",
@@ -45,7 +49,8 @@ const services = [
     bg: "bg-white",
     text: "text-espresso",
     iconColor: "text-espresso",
-    descColor: "text-taupe"
+    descColor: "text-taupe",
+    value: "Spa"
   },
   {
     title: "BTS",
@@ -54,7 +59,8 @@ const services = [
     bg: "bg-espresso",
     text: "text-cream",
     iconColor: "text-gold",
-    descColor: "text-cream/70"
+    descColor: "text-cream/70",
+    value: "BTS"
   }
 ];
 
@@ -85,8 +91,7 @@ export function Services() {
               whileHover={{ y: -8 }}
               className={`group relative p-10 rounded-[2rem] ${service.bg} shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden flex flex-col justify-between min-h-[240px]`}
               onClick={() => {
-                const select = document.getElementById('service-select') as HTMLSelectElement;
-                if (select) select.value = service.title;
+                window.dispatchEvent(new CustomEvent('selectService', { detail: service.value }));
                 document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
               }}
             >

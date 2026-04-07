@@ -2,11 +2,11 @@
 @import "tailwindcss";
 
 @theme {
-  --color-cream: #FAF7F0;
-  --color-espresso: #1A1410;
+  --color-cream: #FFF8C6;
+  --color-espresso: #4A3728;
   --color-gold: #D4AF37;
-  --color-chocolate: #2C2419;
-  --color-taupe: #5C4D3C;
+  --color-chocolate: #3A2A1E;
+  --color-taupe: #6B5442;
   --color-highlight: #C9A99A;
 
   --font-display: "Playfair Display", serif;

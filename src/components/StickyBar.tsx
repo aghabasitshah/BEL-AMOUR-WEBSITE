@@ -37,7 +37,7 @@ export function StickyBar() {
               
               <div className="flex flex-col sm:flex-row w-full md:w-auto gap-3">
                 <a 
-                  href="https://wa.me/923330717123" 
+                  href="https://wa.me/923336068128?text=Hi!%20I%20would%20like%20to%20ask%20about%20your%20services." 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="w-full sm:w-auto px-8 py-3 rounded-full bg-[#25D366] text-white font-sans font-bold text-sm tracking-wider hover:bg-[#20bd5a] transition-colors duration-300 flex items-center justify-center"

@@ -43,7 +43,7 @@ export function Hero() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.7, ease: luxuryEase }}
             className="font-sans text-[clamp(1.5rem,4vw,60px)] text-espresso tracking-[0.4em] mt-8 z-20"
-            style={{ WebkitTextStroke: "1px #1A1410", color: "transparent" }}
+            style={{ WebkitTextStroke: "1px #4A3728", color: "transparent" }}
           >
             SPA & SALON
           </motion.h2>
@@ -52,13 +52,12 @@ export function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.9, ease: luxuryEase }}
-            className="mt-12 flex flex-col items-center space-y-3 text-taupe text-xs font-bold tracking-[0.2em] uppercase z-20"
+            className="mt-12 flex flex-col items-center space-y-3 text-espresso text-xs font-bold tracking-[0.2em] uppercase z-20"
           >
-            <div className="flex items-center">
+            <div className="flex items-center text-center">
               <span className="w-1.5 h-1.5 rounded-full bg-gold mr-3"></span>
-              AIRPORT ROAD, QUETTA
+              AIRPORT ROAD, QUETTA NEAR TCS OFFICE
             </div>
-            <div>WhatsApp: 0333 0717123</div>
           </motion.div>
         </div>
 
@@ -66,29 +65,29 @@ export function Hero() {
         <motion.div
           animate={{ y: [-15, 15, -15] }}
           transition={{ duration: 6, ease: floatEase, repeat: Infinity }}
-          className="absolute left-[-2%] sm:left-[5%] md:left-[15%] top-[60%] sm:top-[50%] md:top-[50%] flex flex-col items-center justify-center p-4 md:p-6 rounded-2xl md:rounded-[2rem] bg-espresso border border-gold/20 shadow-2xl -rotate-6 z-30 w-32 h-40 md:w-48 md:h-56"
+          className="absolute left-[-10%] sm:left-[-2%] md:left-[2%] lg:left-[5%] top-[65%] sm:top-[60%] md:top-[55%] flex flex-col items-center justify-center p-3 md:p-5 rounded-2xl md:rounded-[1.5rem] bg-espresso border border-gold/20 shadow-2xl -rotate-6 z-30 w-28 h-36 md:w-36 md:h-44"
         >
-          <div className="w-8 h-8 md:w-12 md:h-12 rounded-full bg-gold/10 flex items-center justify-center mb-2 md:mb-4">
-            <svg className="w-4 h-4 md:w-6 md:h-6 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-gold/10 flex items-center justify-center mb-2 md:mb-3">
+            <svg className="w-4 h-4 md:w-5 md:h-5 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
             </svg>
           </div>
-          <span className="font-display font-bold text-cream text-sm md:text-xl mb-1">MEHNDI</span>
-          <span className="font-sans text-gold text-[8px] md:text-xs tracking-widest uppercase text-center">Bridal Art</span>
+          <span className="font-display font-bold text-cream text-xs md:text-lg mb-1">MEHNDI</span>
+          <span className="font-sans text-gold text-[7px] md:text-[10px] tracking-widest uppercase text-center">Bridal Art</span>
         </motion.div>
 
         <motion.div
           animate={{ y: [-20, 20, -20] }}
           transition={{ duration: 7, delay: 1, ease: floatEase, repeat: Infinity }}
-          className="absolute right-[-2%] sm:right-[5%] md:right-[15%] top-[20%] sm:top-[30%] md:top-[40%] flex flex-col items-center justify-center p-4 md:p-6 rounded-2xl md:rounded-[2rem] bg-white border border-gold/20 shadow-2xl rotate-6 z-30 w-32 h-40 md:w-48 md:h-56"
+          className="absolute right-[-10%] sm:right-[-2%] md:right-[2%] lg:right-[5%] top-[30%] sm:top-[40%] md:top-[45%] flex flex-col items-center justify-center p-3 md:p-5 rounded-2xl md:rounded-[1.5rem] bg-white border border-gold/20 shadow-2xl rotate-6 z-30 w-28 h-36 md:w-36 md:h-44"
         >
-          <div className="w-8 h-8 md:w-12 md:h-12 rounded-full bg-gold/10 flex items-center justify-center mb-2 md:mb-4">
-            <svg className="w-4 h-4 md:w-6 md:h-6 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-gold/10 flex items-center justify-center mb-2 md:mb-3">
+            <svg className="w-4 h-4 md:w-5 md:h-5 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
             </svg>
           </div>
-          <span className="font-display font-bold text-espresso text-sm md:text-xl mb-1">MAKEUP</span>
-          <span className="font-sans text-taupe text-[8px] md:text-xs tracking-widest uppercase text-center">Bridal & Party</span>
+          <span className="font-display font-bold text-espresso text-xs md:text-lg mb-1">MAKEUP</span>
+          <span className="font-sans text-taupe text-[7px] md:text-[10px] tracking-widest uppercase text-center">Bridal & Party</span>
         </motion.div>
 
         {/* Rotating Seal */}
@@ -125,7 +124,7 @@ export function Hero() {
           <span className="text-gold hidden md:inline">-</span>
           <span className="hidden md:inline">BY RJ GROUP</span>
           <span className="text-gold hidden lg:inline">-</span>
-          <span className="hidden lg:inline">AIRPORT ROAD, QUETTA</span>
+          <span className="hidden lg:inline">AIRPORT ROAD, QUETTA NEAR TCS OFFICE</span>
         </div>
       </div>
     </section>
