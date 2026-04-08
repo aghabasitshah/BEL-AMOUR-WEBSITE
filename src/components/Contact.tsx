@@ -26,7 +26,7 @@ export function Contact() {
     e.preventDefault();
     setIsSubmitting(true);
     
-    const phoneNumber = "923366068128";
+    const phoneNumber = "923330717123";
     const text = `*New Appointment Request*\n\n*Name:* ${formData.name}\n*WhatsApp:* ${formData.whatsapp}\n*Service:* ${formData.service}\n*Preferred Date:* ${formData.date}\n*Message:* ${formData.message || 'N/A'}`;
     const encodedText = encodeURIComponent(text);
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedText}`;
