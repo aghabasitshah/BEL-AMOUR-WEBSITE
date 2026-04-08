@@ -10,7 +10,7 @@ export function Footer() {
         </p>
       </div>
       
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-32">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
           {/* Logo */}
           <div className="lg:col-span-2">
@@ -66,7 +66,7 @@ export function Footer() {
           </div>
           <div className="flex items-center space-x-6">
             <a 
-              href="https://www.instagram.com/belamour_salonandspa" 
+              href="https://www.instagram.com/belamour_salonandspa?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" 
               target="_blank" 
               rel="noopener noreferrer"
               className="font-sans text-sm text-cream/60 hover:text-gold transition-colors flex items-center"
@@ -74,7 +74,7 @@ export function Footer() {
               Instagram
             </a>
             <a 
-              href="https://www.threads.com/@belamour_salonandspa" 
+              href="https://www.threads.com/@belamour_salonandspa?xmt=AQF0OOKAHoPF71xKfUAW0_3IFmp7xhTeb0ixTX0rhRIFT40" 
               target="_blank" 
               rel="noopener noreferrer"
               className="font-sans text-sm text-cream/60 hover:text-gold transition-colors flex items-center"

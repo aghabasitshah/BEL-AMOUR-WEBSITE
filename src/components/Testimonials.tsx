@@ -22,6 +22,16 @@ const testimonials = [
     quote: "The microblading changed my life. So natural, so perfect.",
     author: "Zara M.",
     service: "Microblading"
+  },
+  {
+    quote: "The spa treatment was incredibly relaxing. The ambiance and service are unmatched in the city.",
+    author: "Ayesha T.",
+    service: "Spa Treatment"
+  },
+  {
+    quote: "I booked them for my sister's wedding. The entire team was so accommodating and the results were flawless.",
+    author: "Hira N.",
+    service: "Bridal & Party Makeup"
   }
 ];
 
@@ -35,15 +45,15 @@ export function Testimonials() {
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth < 640) {
-        setRadius(160);
+        setRadius(280);
         setCardWidth(260);
         setCardHeight(320);
       } else if (window.innerWidth < 1024) {
-        setRadius(250);
+        setRadius(360);
         setCardWidth(300);
         setCardHeight(360);
       } else {
-        setRadius(400);
+        setRadius(480);
         setCardWidth(360);
         setCardHeight(400);
       }
