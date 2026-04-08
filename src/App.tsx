@@ -12,6 +12,7 @@ import { Deals } from "./components/Deals";
 import { Contact } from "./components/Contact";
 import { StickyBar } from "./components/StickyBar";
 import { Footer } from "./components/Footer";
+import { FloatingWhatsApp } from "./components/FloatingWhatsApp";
 
 export default function App() {
   return (
@@ -25,6 +26,7 @@ export default function App() {
       <Contact />
       <Footer />
       <StickyBar />
+      <FloatingWhatsApp />
     </main>
   );
 }

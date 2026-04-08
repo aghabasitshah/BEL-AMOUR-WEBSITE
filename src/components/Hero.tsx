@@ -42,8 +42,7 @@ export function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.7, ease: luxuryEase }}
-            className="font-sans text-[clamp(1.5rem,4vw,60px)] text-espresso tracking-[0.4em] mt-8 z-20"
-            style={{ WebkitTextStroke: "1px #4A3728", color: "transparent" }}
+            className="font-sans text-[clamp(1.5rem,4vw,60px)] text-gold tracking-[0.4em] mt-8 z-20"
           >
             SPA & SALON
           </motion.h2>
